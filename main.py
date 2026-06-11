@@ -1,10 +1,9 @@
 import random
 from collections import deque
-import random
 
 
 def print_matrix(matrix):
-    print("Graf jako macierz sąsiedztwa:")
+    print("Graph as an adjacency matrix:")
     for row in matrix:
         print(*row)
 
@@ -110,7 +109,7 @@ def dfs_euler(v, matrix, n, queue):
 def search_euler(matrix, n):
     queue = deque()
     dfs_euler(0, matrix, n, queue)
-    print("Ścieżka Eulera:", list(queue))
+    print("Euler path:", list(queue))
 
 
 def hamiltonian(v, matrix):
@@ -155,5 +154,5 @@ current_path = []
 
 print_matrix(matrix_hamilton)
 h_cycle(matrix_hamilton)
-print(f"Cykl Hamiltona: {Path}")
+print(f"Hamiltonian cycle: {Path}")
 search_euler(matrix_hamilton, 10)
